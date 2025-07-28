@@ -3,9 +3,9 @@
     String name;
     int age;
 
-    public Student(int id, String name, int age) throws InvalidStudentDataException {
+    public Student(int id, String name, int age) throws InvalidStudentage {
         if (age < 0) {
-            throw new InvalidStudentDataException("Age cannot be negative: " + age);
+            throw new InvalidStudentage("Age cannot be negative: " + age);
         }
         this.id = id;
         this.name = name;
@@ -17,8 +17,8 @@
     }
 }
 
- class InvalidStudentDataException extends Exception {
-    public InvalidStudentDataException(String message) {
+ class InvalidStudentage extends Exception {
+    public InvalidStudentage(String message) {
         super(message);
     }
 }
